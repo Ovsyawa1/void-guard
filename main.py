@@ -1,13 +1,13 @@
 from globals import bot
 
 
-from my_handlers.after_start_handlers import start_message, help_message
-from my_handlers.free_trial_handlers import free_trial_message, free_trial_activation
-from my_handlers.cancel_handler import cancel_process
+from handlers.after_start_handlers import start_message, help_message
+from handlers.free_trial_handlers import free_trial_message, free_trial_activation
+from handlers.cancel_handler import cancel_process
 
-from my_handlers.free_trial_handlers import android_instruction
-from my_handlers.free_trial_handlers import instruction_completion
-from my_handlers.free_trial_handlers import call_us
+from handlers.free_trial_handlers import android_instruction
+from handlers.free_trial_handlers import instruction_completion
+from handlers.free_trial_handlers import call_us
 from state_filter import any_entry_state
 import config, text_for_buttons
 from commands import default_commands

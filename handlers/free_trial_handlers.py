@@ -1,7 +1,7 @@
 import keyboards
 import messages
 from globals import bot
-from state_filter import MyStates
+from state_filter import ChattingStates
 
 
 from telebot import types
@@ -11,7 +11,7 @@ def free_trial_message(message: types.Message):
     bot.set_state(
         user_id=message.from_user.id,
         chat_id=message.chat.id,
-        state=MyStates.free_trial,
+        state=ChattingStates.free_trial,
     )
     bot.send_message(
         chat_id=message.chat.id,
@@ -25,7 +25,7 @@ def free_trial_activation(message: types.Message):
     bot.set_state(
         user_id=message.from_user.id,
         chat_id=message.chat.id,
-        state=MyStates.free_trial_activation,
+        state=ChattingStates.free_trial_activation,
     )
     bot.send_message(
         chat_id=message.chat.id,
@@ -39,7 +39,7 @@ def android_instruction(message: types.Message):
     bot.set_state(
         user_id=message.from_user.id,
         chat_id=message.chat.id,
-        state=MyStates.android_instruction,
+        state=ChattingStates.android_instruction,
     )
     bot.send_message(
         chat_id=message.chat.id,
